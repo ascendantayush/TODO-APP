@@ -106,6 +106,40 @@ form{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.delete-button svg{
+    transition: fill ease 200ms;
+}
+
+.delete-button:hover svg{
+    fill: red;
     
 }
+
+.custom-checkbox{
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+input[type ="checkbox"]:checked ~  .custom-checkbox{
+    background-color: var(--accent-color);
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox svg{
+    fill:var(--primary-color);
+}
+
+
+
+
+
+
 
