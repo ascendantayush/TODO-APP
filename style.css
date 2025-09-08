@@ -95,7 +95,9 @@ form{
 .todo .todo-text{
     padding: 15px;
     padding-right: 0;
-    flex-grow: 1 /*pushes the delete button to the end */   
+    flex-grow: 1 ;/*pushes the delete button to the end */  
+    transition: 100ms ease; 
+    cursor: pointer;
 }
 
 .delete-button{
@@ -126,6 +128,8 @@ form{
     justify-content: center; 
     align-items: center;
     flex-shrink: 0;
+    transition: 200ms ease;
+    cursor: pointer;
 }
 
 
@@ -137,9 +141,35 @@ input[type="checkbox"]:checked ~ .custom-checkbox svg{
     fill:var(--primary-color);
 }
 
+input[type="checkbox"]:checked ~ .todo-text{
+    text-decoration: line-through;
+    color: var(--secondary-color);
+}
 
 
 
 
 
 
+input[type="checkbox"]{
+    display: none;
+}
+
+@media(max-width: 500px){
+    html{
+        font-size: 12pt;
+    }
+
+    #add-button{
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        height: auto;
+    }
+
+    h1{
+        margin-top: 50px;
+        font-size: 15vw;
+    }
+}
